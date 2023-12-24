@@ -17,7 +17,7 @@ Algorithmic Trading Club, University of Washington, Seattle
 
 Contact: leegarap[at]uw.edu
 
-
+//Thomas Test Code- modifications for practice
 
 For educational purposes only
 """
