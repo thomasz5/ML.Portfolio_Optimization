@@ -40,11 +40,11 @@ plt.legend()
 plt.title("stock prices (starting from 2011)")
 
 """### Return
-Return is how much the investment changed in each time step.
+In the context of investments, return signifies how much the investment changed over preemptive time intervals.
 
-There are many ways to compute returns. The simplest one is to divide the change in stock price by the price in the previous time step.
+Many methologies for coputing returns exist. The most straightforward one involves determining the percentage change in stock prices by dividing the change in stock price by the price in the prededing time interval.
 
-In finanical economics, they calculate something called **log return**, which is approximately equal to the above one, when the different change is close to 0.
+In finanical economics, there's an alternative metric they use called **log return**, which is used to calculate the percentage change, approximately equal to the above one, when the differences between the changes is very minimal.
 """
 # Calculating the logarithmic daily returns
 MSFT_return = np.log(stock_prices[1:,0]) - np.log(stock_prices[:-1,0])
@@ -71,16 +71,16 @@ The average of **the return** shows a value we expect the return would change in
 plt.plot(MSFT_return, label = "MSFT")
 plt.plot(np.arange(len(MSFT_return)),[np.mean(MSFT_return) for i in np.arange(len(MSFT_return))], color = "red")
 
-"""### Variance and Standard Deviation
+"""### Risk Quantification throgh Variance and Standard Deviation
 
-Variance is a value showing how likely the actual returns deviate from their means.
-Std is the square root of the variance
+Variance serves as a value indicating how likely the actual returns deviate from their means.
+Standard deviation (Std) is the square root of this variance, measuring the dispersion within the returns.
 
+In traditional financial econometric (at least 30 years ago), the prevalent assumption was that the variance (and std) represented the primary risk associated with investing in stocks.
+The higher the variance, the higher probability the actual returns deviate from the expected (average or anticipated) return.
 
-In traditional financial econometric (at least 30 years ago), they frequently assume that the variance (and std) is **the risk** of investing in stock.
-More variance, more likely the actual return deviate from the expected (average) return.
-
-There are a lot of better methods to determine the risk of investment
+However, this approach is not exclusive, and there are more methods to assess investment risk.
+Various advanced techniques and metrics other than simple variance and std offer more nuanced and accurate understanding of financial risk.
 """
 # Calculating the standard deviation and variance of stocks
 np.std(MSFT_return)
@@ -88,9 +88,9 @@ np.var(MSFT_return)
 
 """### Covariance and Correlation
 
-**Covariance** of two returns is a value showing how one of the returns would change given another changed.
+**Covariance** signifies how the change in one return relates to the change in another,
 
-**Correlation** of two returns is a standardized covariance (lying between -1 and 1)
+**Correlation** of two returns is a standardized form of covariance (lying between -1 and 1) that offers a more standard perspective bewteen the two returns.
 
 In the example below, I paired return on the same day of JNJ and MSFT. You can see that when the return of MSFT increase, the return of JNJ also increases
 
