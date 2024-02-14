@@ -1,14 +1,7 @@
-# -*- coding: utf-8 -*-
 """
 Deep Cognitive Frameworks Enhancing Proactive Portfolio Optimization Strategies since 2011
+""
 
-**Authors**:
-Wanchaloem "Omzin" Wunkaew
-Thomas Zeng
-
-Algorithmic Trading Club, University of Washington, Seattle
-
-"""
 
 import numpy as np # Efficient numerical operations and array manipulations
 import matplotlib.pyplot as plt # Creating visualizations such as plots and charts
