@@ -6,3 +6,11 @@ The goal is to leverage historical stock price data to train an LSTM model, it's
 
 ### Steps:
 1. 
+
+2. df
+
+3.  34
+
+4.   3231
+
+5.    
